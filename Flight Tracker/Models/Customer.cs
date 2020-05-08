@@ -14,5 +14,7 @@ namespace Flight_Tracker.Models
         public string LastName { get; set; }
         public string FlightNumber { get; }
         public List<Contact> Contacts { get; set; }
+        public string UserName { get; internal set; }
+        public string Email { get; internal set; }
     }
 }
