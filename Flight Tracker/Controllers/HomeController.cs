@@ -20,6 +20,7 @@ namespace Flight_Tracker.Controllers
 
         public IActionResult Index()
         {
+            
             return View();
         }
 
