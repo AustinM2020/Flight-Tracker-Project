@@ -13,7 +13,6 @@ namespace Flight_Tracker.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string FlightNumber { get; }
-
-
+        public List<Contact> Contacts { get; set; }
     }
 }
