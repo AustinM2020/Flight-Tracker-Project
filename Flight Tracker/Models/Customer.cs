@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Flight_Tracker.Models
 {
-    public class User
+    public class Customer
     {
         [Key]
         public int Id { get; set; }
