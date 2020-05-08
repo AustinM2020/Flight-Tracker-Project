@@ -13,7 +13,7 @@ namespace Flight_Tracker.Data
             : base(options)
         {
         }
-        public DbSet<User> Users { get; set; }
+        public DbSet<Customer> Users { get; set; }
         public DbSet<Contact> Contacts { get; set; }
     }
 }
