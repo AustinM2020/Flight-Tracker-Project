@@ -43,7 +43,7 @@ namespace Flight_Tracker.Controllers
             }
 
             var customer = await _context.Customers
-                .Include(c => c.identityUser)
+                .Include(c => c.IdentityUser)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (customer == null)
             {
@@ -139,7 +139,7 @@ namespace Flight_Tracker.Controllers
             }
 
             var customer = await _context.Customers
-                .Include(c => c.identityUser)
+                .Include(c => c.IdentityUser)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (customer == null)
             {
