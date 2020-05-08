@@ -23,7 +23,7 @@ namespace Flight_Tracker.Controllers
         public IActionResult Index()
         {
             var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
-            var customer = _context.Customers.Where(c => c.IdentityUserId == userId).ToList();
+            var customer = _context.Customers.Where(c => c.IdentityUserId == userId).Include(c => c.IdentityUserId).ToList();
             if (customer.Count == 0)
             {
                 return RedirectToAction("Create");
@@ -32,8 +32,6 @@ namespace Flight_Tracker.Controllers
             {
                 return View(customer);
             }
-            var applicationDbContext = _context.Customers.Include(c => c.identityUser);
-            return View(applicationDbContext.ToListAsync());
         }
 
         // GET: Customers/Details/5

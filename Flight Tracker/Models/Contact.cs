@@ -18,6 +18,5 @@ namespace Flight_Tracker.Models
         [ForeignKey ("User")]
         public int UserId { get; set; }
         public Customer User { get; set; }
-        public int AustinsError { get; set; }//delete this line
     }
 }
